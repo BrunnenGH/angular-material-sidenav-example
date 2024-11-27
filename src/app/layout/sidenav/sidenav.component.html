@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [mode]="'side'"
+      [opened]="false">
+    Sidenav
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+    <mat-toolbar color="primary">
+      <button
+        style="width: 50px"
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        Menu
+      <!--  <mat-icon aria-label="Side nav toggle icon">menu</mat-icon> -->
+      </button>
+    
+      <span>My Application</span>
+    </mat-toolbar>
+    <div class="content">
+      <ng-content> Sidenav content</ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
